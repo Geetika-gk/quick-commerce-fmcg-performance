@@ -15,7 +15,7 @@ Has the rapid expansion of quick commerce (Blinkit, Zepto, Swiggy Instamart) coi
 - **Pre → post averages · Divergence, not convergence.**
 - **Marico:** CCC –18.8 days but DSO +17.0 days; all margins up.
 - **Dabur:** margins down across the board; CCC compression (–13.8 days) predominantly payables-driven — DIO/DSO moved only marginally while DPO stretched 126.9 → 138.5 days (146.5 in FY25).
-- **HUL:** deeply negative CCC (–12.7 days) became less negative (+12.7 days); DSO dipped in FY2021 then rose every year from FY2022 on (12.9 → 19.7 days by FY25); margins essentially held.
+- **HUL:** deeply negative CCC became less negative (+12.7 days); DSO dipped in FY2021 then rose every year from FY2022 on (12.9 → 19.7 days by FY25); margins essentially held.
 - **Returns fell everywhere**, but HUL's reported ROCE/ROA collapse is dominated by the FY2021 GSK-CH merger (total assets ₹20,153 → ₹68,757 cr) — this structural break is flagged directly on Chart 4 (FY20 plotted as a disconnected pre-merger artefact point, with an ex-FY20 sensitivity band); excluding the pre-merger FY2020 base, HUL ROCE (project-defined) is flat at 20–22% from FY2022 on.
 - **Revenue** decelerated at all three, steepest at HUL; heavily confounded by the pandemic-rebound pre-period base and FY2024–25 urban demand softness.
 
