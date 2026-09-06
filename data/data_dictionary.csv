@@ -1,0 +1,16 @@
+variable,definition,notes
+Revenue,"Revenue from Operations, Consolidated P&L",Direct line item
+COGS,Cost of materials consumed + Purchases of stock-in-trade + Changes in inventories of FG/WIP/SIT,Computed; excise duty (Dabur FY19-FY21) excluded by definition
+Gross Profit,Revenue - COGS,Computed; not a company-reported line
+EBITDA,PBEIT + Finance costs + D&A - Other income,Computed; PBEIT used so exceptional items never leak in
+EBIT,EBITDA - D&A,Computed
+Net Profit,Profit for the year attributable to Owners of the Company,Excludes non-controlling interests
+Capital Employed,Total Assets - Total Current Liabilities,Computed from Consolidated Balance Sheet
+DIO,Average Inventory / COGS x 365,Average = (opening+closing)/2; FY19 closing = FY20 opening
+DSO,Average Trade Receivables / Revenue x 365,Average-balance basis
+DPO,Average Trade Payables / COGS x 365,Trade payables = MSME dues + other dues
+CCC,DIO + DSO - DPO,Computed
+Gross/EBITDA/Net Margin,Metric / Revenue,Flow-based; no averaging
+ROCE,EBIT / Average Capital Employed,Project-defined; distinct from company-disclosed ROCE
+ROA,Net Profit (owners) / Average Total Assets,Average-balance basis
+Revenue Growth,(Rev_t - Rev_t-1) / Rev_t-1,Year on year
