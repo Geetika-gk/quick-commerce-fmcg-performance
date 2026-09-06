@@ -1,84 +1,61 @@
-Quick-Commerce Expansion and FMCG Financial Performance
-A Comparative Descriptive Analysis of Marico, Dabur, and Hindustan Unilever (FY2020–
-FY2025)
-Author: Geetika Kapoor · Youth Economy Lab — Computation / Financial Modeling Track · 
-Capstone Project
-Research question
-Has the rapid expansion of quick commerce (Blinkit, Zepto, Swiggy Instamart) coincided with 
-measurable changes in profitability and working-capital efficiency at three major Indian FMCG
-companies? The analysis is descriptive and associative, not causal.
-Design
-• Data: Consolidated Financial Statements only (annual reports FY2019–FY2025; FY2019 
-used solely for opening balances). Every observation carries a source citation in 
-data/raw_sourced_table.csv and was verified against scanned statement pages 
-(all 315 raw line-item observations matched; all pages headed “Consolidated”). 
-Separately, the 294 derived values computed in the Excel workbook (98 per company 
-across its three company sheets) were diff-checked to zero mismatches against the 
-Python pipeline — see notebooks/analysis_walkthrough.md.
-• Periods: Pre = FY2020–22 · Transition = FY2023 (held out) · Post = FY2024–25, with a 
-FY2023–25 sensitivity check.
-• Metrics: DIO, DSO, DPO, CCC (average-balance basis), gross/EBITDA/net margins, ROCE
-(EBIT ÷ avg. capital employed, project-defined), ROA, revenue growth. EBITDA is built 
-from PBEIT (never reported PBT) so exceptional items cannot leak in; net profit is 
-owners’ share only.
-Headline results (pre → post averages)
-• Divergence, not convergence. Marico: CCC −18.8 days but DSO +17.0 days; all margins 
-up. Dabur: margins down across the board; CCC compression (−13.8 days) 
-predominantly payables-driven — DIO/DSO moved only marginally while DPO 
-stretched 126.9 → 138.5 (146.5 in FY25). HUL: deeply negative CCC became less negative 
-(+12.7 days); DSO dipped in FY2021 then rose every year from FY2022 on (12.9 → 19.7 
-days by FY25); margins essentially held.
-• Returns fell everywhere, but HUL’s reported ROCE/ROA collapse is dominated by the 
-FY2021 GSK-CH merger intangibles (total assets 20,153 → 68,757 cr) — this structural ₹ ₹
-break is now flagged directly on Chart 4 (FY20 plotted as a disconnected pre-merger 
-artefact point, with an ex-FY20 sensitivity band): excluding the pre-merger FY2020 
-base, HUL ROCE (project-defined) is flat at 20–22% from FY2022 on.
-• Revenue growth decelerated at all three, steepest at HUL; heavily confounded by 
-the pandemic-rebound pre-period base and FY2024–25 urban demand softness. • Robustness: re-classifying FY2023 into the post-period changes no signs; it moderates 
-Marico’s margin gain, Dabur’s cycle compression, and HUL’s growth deceleration. A 
-geometric (CAGR) recomputation of revenue growth likewise preserves every sign and 
-ordering (largest arithmetic-vs-CAGR gap: 0.3pp; see 
-outputs/revenue_growth_cagr_check.csv); arithmetic period averages are 
-retained as primary for consistency with the other period-averaged metrics.
-• The cleanest channel-mix fingerprint in the data is the sustained DSO rise at HUL 
-and Marico from FY2022 on — the direction organised/platform channel growth 
-would push (an association, not an attribution) — corroborated by company disclosures
-(HUL: QC its fastest-growing channel within a 7–8%-of-sales e-commerce business; 
-Marico: channel-specific pack architecture + Project SETU destocking; Dabur: QC 
-salience within e-commerce rising toward ~75%, general-trade correction).
-Repository structure
+# Quick-Commerce Expansion and FMCG Financial Performance
+### A Comparative Descriptive Analysis of Marico, Dabur, and Hindustan Unilever (FY2020–FY2025)
+
+**Author:** Geetika Kapoor · Youth Economy Lab — Computation / Financial Modeling Track · Capstone Project
+
+## Research Question
+Has the rapid expansion of quick commerce (Blinkit, Zepto, Swiggy Instamart) coincided with measurable changes in profitability and working-capital efficiency at three major Indian FMCG companies? The analysis is descriptive and associative, not causal.
+
+## Design
+- **Data:** Consolidated Financial Statements only (annual reports FY2019–FY2025; FY2019 used solely for opening balances). Every observation carries a source citation in `data/raw_sourced_table.csv` and was verified against scanned statement pages (all 315 raw line-item observations matched; all pages headed "Consolidated"). Separately, the 294 derived values computed in the Excel workbook (98 per company across the three company sheets) were diff-checked to zero mismatches against the Python pipeline — see `notebooks/analysis_walkthrough.md`.
+- **Periods:** Pre = FY2020–22 · Transition = FY2023 (held out) · Post = FY2024–25, with a FY2023–25 sensitivity check.
+- **Metrics:** DIO, DSO, DPO, CCC (average-balance basis), gross/EBITDA/net margins, ROCE (EBIT ÷ avg. capital employed, project-defined), ROA, revenue growth. EBITDA is built from PBEIT (never reported PBT) so exceptional items cannot leak in; net profit is owners' share only.
+
+## Headline Results
+- **Pre → post averages · Divergence, not convergence.**
+- **Marico:** CCC –18.8 days but DSO +17.0 days; all margins up.
+- **Dabur:** margins down across the board; CCC compression (–13.8 days) predominantly payables-driven — DIO/DSO moved only marginally while DPO stretched 126.9 → 138.5 days (146.5 in FY25).
+- **HUL:** deeply negative CCC (–12.7 days) became less negative (+12.7 days); DSO dipped in FY2021 then rose every year from FY2022 on (12.9 → 19.7 days by FY25); margins essentially held.
+- **Returns fell everywhere**, but HUL's reported ROCE/ROA collapse is dominated by the FY2021 GSK-CH merger (total assets ₹20,153 → ₹68,757 cr) — this structural break is flagged directly on Chart 4 (FY20 plotted as a disconnected pre-merger artefact point, with an ex-FY20 sensitivity band); excluding the pre-merger FY2020 base, HUL ROCE (project-defined) is flat at 20–22% from FY2022 on.
+- **Revenue** decelerated at all three, steepest at HUL; heavily confounded by the pandemic-rebound pre-period base and FY2024–25 urban demand softness.
+
+## Robustness
+Re-classifying FY2023 into the post-period changes no signs; it moderates Marico's margin gain, Dabur's cycle compression, and HUL's growth deceleration. Geometric (CAGR) recomputation of revenue growth likewise preserves every sign and ordering (largest arithmetic-vs-CAGR gap: 0.3pp; see `outputs/revenue_growth_cagr_check.csv`); arithmetic period averages are retained as primary for consistency with the other period-averaged metrics.
+
+## Cleanest Signal
+The cleanest channel-mix fingerprint in the data is the sustained DSO rise at HUL and Marico from FY2022 on — the direction organised/platform channel growth would push (an association, not an attribution) — corroborated by company disclosures (HUL: QC its fastest-growing channel within a 7–8%-of-sales e-commerce business; Marico: channel-specific pack architecture + Project SETU destocking; Dabur: QC salience within e-commerce rising toward ~75%, general-trade correction).
+
+## Repository Structure
+```
 quick-commerce-fmcg-capstone/
 ├── data/
-│ ├── raw_sourced_table.csv # verified line items, per-
-observation citations
-│ ├── data_dictionary.csv # fixed variable definitions 
-(Section 2.1–2.2)
-│ ├── tidy_metrics.csv # long-format derived metrics
-│ └── Marico_Dabur_HUL_Capstone.xlsx
-├── notebooks/analysis_walkthrough.md
+│   ├── raw_sourced_table.csv        # verified line items, per-observation citations
+│   └── data_dictionary.csv          # fixed variable definitions (Section 2.1–2.2)
+├── notebooks/
+│   └── analysis_walkthrough.md      # long-form methods walkthrough
 ├── src/
-│ ├── compute_metrics.py # raw table → metrics → pre/post 
-comparison
-│ └── make_charts.py # regenerates the 6 charts
+│   ├── compute_metrics.py           # raw table -> metrics -> pre/post comparison
+│   └── make_charts.py               # regenerates the 6 charts
 ├── outputs/
-│ ├── metrics_full_series.csv
-│ ├── pre_post_comparison.csv
-│ ├── revenue_growth_cagr_check.csv
-│ └── charts/chart1..chart6 .png # regenerated by 
-src/make_charts.py; embedded in the report and deck
+│   ├── metrics_full_series.csv
+│   ├── pre_post_comparison.csv
+│   ├── revenue_growth_cagr_check.csv
+│   ├── tidy_metrics.csv
+│   └── charts/
+│       └── chart1..chart6.png       # regenerated by src/make_charts.py, embedded in the report and deck
 ├── report/
-│ ├── Geetika Kapoor YEL 2026 Summer Cohort – Capstone 
-Submission.docx # merged full report (Sections 1–10), also exported 
-to PDF
-│ └── Final_Presentation.pptx # submitted version (no speaker 
-notes)
+│   ├── Geetika Kapoor - Capstone YEL 2026 Summer Cohort - Capstone Submission.docx  # merged full report (Sections 1-10), also exported to PDF
+│   └── Final_Presentation.pptx      # submitted version (no speaker notes)
 ├── requirements.txt
 └── README.md
-Reproduce
+```
+
+## Reproduce
+```
 pip install -r requirements.txt
 python src/compute_metrics.py
-python src/make_charts.py Key limitations
-Descriptive comparison of 3+2 fiscal years per company; no causal identification; confounders 
-(COVID, input-cost inflation, GSK-CH merger, urban demand cycle, M&A) documented in the 
-paper’s Section 2.5 timeline rather than controlled for; consolidated statements cannot isolate 
-channel-level sales.
+python src/make_charts.py
+```
+
+## Key Limitations
+Descriptive comparison of 3+2 fiscal years per company; no causal identification; confounders (COVID, input-cost inflation, GSK-CH merger, urban demand cycle, M&A) documented in the paper's Section 2.5; timeline rather than controlled; consolidated statements only, isolate channel-level sales.
