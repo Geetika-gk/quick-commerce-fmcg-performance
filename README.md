@@ -58,4 +58,4 @@ python src/make_charts.py
 ```
 
 ## Key Limitations
-Descriptive comparison of 3+2 fiscal years per company; no causal identification; confounders (COVID, input-cost inflation, GSK-CH merger, urban demand cycle, M&A) documented in the paper's Section 2.5; timeline rather than controlled; consolidated statements only, isolate channel-level sales.
+Descriptive comparison of 3+2 fiscal years per company; no causal identification; confounders (COVID, input-cost inflation, GSK-CH merger, urban demand cycle, M&A) documented in the paper's Section 2.5; timeline rather than controlled; consolidated statements only, cannot isolate channel-level sales.
